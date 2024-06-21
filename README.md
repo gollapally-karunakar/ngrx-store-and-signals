@@ -1,1 +1,1 @@
-# ngrx-store-and-signals
+app-store
