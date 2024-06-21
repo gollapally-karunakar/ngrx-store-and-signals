@@ -1,0 +1,33 @@
+
+<div class="text-left" style="padding: 0.5%;display: flex;">
+    <div class="text-center" style="width: 300px;">
+        <h5>Count Using Store</h5>
+        <p>{{count$ | async}}</p>
+        <button (click)="increment()" type="button" class="btn btn-success">Increment</button>
+        <button (click)="decrement()" type="button" class="btn btn-danger">Decrement</button>
+        <button (click)="reset()" type="button" class="btn btn-dark">Reset</button>
+    </div>
+    <div>
+        <app-signal-counter/>
+    </div>
+</div>
+<div>
+
+</div>
+<div>
+    <h4>From Counter Component</h4>
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts$ | async">
+            <th scope="row">{{post.id}}</th>
+            <td>{{post.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

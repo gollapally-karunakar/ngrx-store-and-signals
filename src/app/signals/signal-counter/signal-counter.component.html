@@ -1,0 +1,20 @@
+<div style="display: flex;">
+    <div class="text-center" style="width: 300px;">
+        <h5>Count Using angular Signals</h5>
+        <p>Single: {{this.count()}} 
+            <span style="padding-left: 5px;">Double: {{this.double()}}</span>
+        </p>
+        <button (click)="increment()" type="button" class="btn btn-success">Increment</button>
+        <button (click)="decrement()" type="button" class="btn btn-danger">Decrement</button>
+        <button (click)="reset()" type="button" class="btn btn-dark">Reset</button>
+    </div>
+    <div class="text-right" style="width: 300px;">
+        <h5>Count Using NGRX Signals</h5>
+        <p>Single: {{counterStoreSignal.count()}} 
+            <span style="padding-left: 5px;">Double: {{counterStoreSignal.doubleCount()}}</span>
+        </p>
+        <button (click)="this.counterStoreSignal.increment()" type="button" class="btn btn-success">Increment</button>
+        <button (click)="this.counterStoreSignal.decrement()" type="button" class="btn btn-danger">Decrement</button>
+        <button (click)="this.counterStoreSignal.reset()" type="button" class="btn btn-dark">Reset</button>
+    </div>
+</div>
